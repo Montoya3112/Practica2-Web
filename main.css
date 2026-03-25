@@ -3,20 +3,33 @@ body {
     background-color: var(--light);
     color: var(--dark);
     margin: 0;
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
+    /* Altura total de la pantalla sin scroll */
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Bloquea el scroll */
 }
 
 .main-header {
     background-color: var(--dark);
     color: var(--white);
-    padding: 2rem 0;
+    padding: 1.5rem 0;
     text-align: center;
     box-shadow: var(--shadow-md);
+    flex-shrink: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+main.container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center; /* Centra la tarjeta verticalmente */
+    justify-content: center;
 }
 
 .card {
@@ -24,13 +37,15 @@ body {
     padding: 2rem;
     border-radius: var(--radius);
     box-shadow: var(--shadow-md);
-    margin-top: 2rem;
     border-top: 5px solid var(--primary);
+    width: 100%;
 }
 
 .main-footer {
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
     color: var(--secondary);
     font-size: 0.8rem;
+    background: var(--light);
+    flex-shrink: 0;
 }
