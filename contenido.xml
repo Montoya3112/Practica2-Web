@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <articulos>
     <articulo>
-        <titulo>Desarrollo Web con Estándares Modernos</titulo>
-        <autor>MARCO ANTONIO MONTOYA (ISC - TESJO)</autor>
-        <descripcion>
+        <título>Desarrollo Web con Estándares Modernos</título>
+        <autor>MARCO ANTONIO MONTOYA</autor>
+        <grupo>IC-0803</grupo>
+        <profesor>MARCIAL JESUS MARTINEZ BLAS</profesor>
+        <descripción>
             Esta práctica demuestra la integración exitosa de HTML5 para la estructura, 
             CSS3 para el diseño responsivo y XML para el manejo de datos dinámicos.
         </descripcion>
