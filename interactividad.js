@@ -3,31 +3,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
     fetch("contenido.xml")
         .then(response => {
-            if (!response.ok) throw new Error("Archivo no encontrado");
+            if (!response.ok) throw new Error("No se encontró contenido.xml");
             return response.text();
         })
         .then(str => {
             const parser = new DOMParser();
             const xmlDoc = parser.parseFromString(str, "application/xml");
             
+            // Extracción de datos con etiquetas exactas
             const titulo = xmlDoc.getElementsByTagName("título")[0]?.textContent || "Práctica 2";
             const autor = xmlDoc.getElementsByTagName("autor")[0]?.textContent || "Marco Montoya";
-            const desc = xmlDoc.getElementsByTagName("descripción")[0]?.textContent || "";
+            const grupo = xmlDoc.getElementsByTagName("grupo")[0]?.textContent || "IC-0803";
+            const profesor = xmlDoc.getElementsByTagName("profesor")[0]?.textContent || "";
+            const desc = xmlDoc.getElementsByTagName("descripción")[0]?.textContent || "Sin descripción disponible";
 
-            // Efecto de aparición suave (Fade-in)
-            displayArea.style.opacity = "0";
-            displayArea.style.transition = "opacity 0.8s ease-in";
-
+            // Renderizado completo en la tarjeta
             displayArea.innerHTML = `
-                <h2 style="color: var(--primary); margin-bottom: 10px;">${titulo}</h2>
-                <p style="font-size: 1.1rem;"><strong>Alumno:</strong> ${autor}</p>
-                <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
-                <p style="color: #555; line-height: 1.5;">${desc}</p>
+                <h2 style="color: var(--primary); margin-top: 0;">${titulo}</h2>
+                <p><strong>Alumno:</strong> ${autor} | <strong>Grupo:</strong> ${grupo}</p>
+                <p><strong>Docente:</strong> ${profesor}</p>
+                <hr style="opacity: 0.1; margin: 1rem 0;">
+                <p style="color: #444; line-height: 1.6;">${desc}</p>
             `;
-
-            setTimeout(() => { displayArea.style.opacity = "1"; }, 100);
         })
         .catch(err => {
-            displayArea.innerHTML = `<p style="color:red;">Error: ${err.message}</p>`;
+            displayArea.innerHTML = `<p style="color:red;">Error de carga: ${err.message}</p>`;
         });
 });
