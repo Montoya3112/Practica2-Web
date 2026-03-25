@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <articulos>
-    <articulo id="101">
+    <articulo>
         <titulo>Desarrollo Web con Estándares Modernos</titulo>
-        <autor>Marco (ISC - TESJO)</autor>
-        <fecha>2026-03-24</fecha>
-        <categoria>Programación Web</categoria>
+        <autor>MARCO ANTONIO MONTOYA (ISC - TESJO)</autor>
         <descripcion>
-            Implementación avanzada utilizando la separación de capas: 
-            Estructura (HTML), Presentación (CSS) y Datos (XML).
+            Esta práctica demuestra la integración exitosa de HTML5 para la estructura, 
+            CSS3 para el diseño responsivo y XML para el manejo de datos dinámicos.
         </descripcion>
     </articulo>
 </articulos>
