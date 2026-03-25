@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articulos>
+    <articulo id="101">
+        <titulo>Desarrollo Web con Estándares Modernos</titulo>
+        <autor>Marco (ISC - TESJO)</autor>
+        <fecha>2026-03-24</fecha>
+        <categoria>Programación Web</categoria>
+        <descripcion>
+            Implementación avanzada utilizando la separación de capas: 
+            Estructura (HTML), Presentación (CSS) y Datos (XML).
+        </descripcion>
+    </articulo>
+</articulos>

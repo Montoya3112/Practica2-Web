@@ -1,0 +1,45 @@
+:root {
+    --primary-color: #2563eb;
+    --dark-bg: #1e293b;
+    --text-main: #334155;
+    --white: #ffffff;
+    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    color: var(--text-main);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.main-header {
+    background-color: var(--dark-bg);
+    color: var(--white);
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin-top: 2rem;
+    border-top: 5px solid var(--primary-color);
+}
+
+.main-footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+    color: #64748b;
+}
